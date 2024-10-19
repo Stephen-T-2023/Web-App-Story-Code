@@ -7,10 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
+        ash: "#A8B2B3",
         onyx: "#393E41",
         paynegrey: "#535B65",
         outerspace: "#4B5657",
         whitesmoke: "#F2F2F2",
+      },
+      fontFamily: {
+        heading: ["Changa", "sans-serif"],
+        body: ["Tenor Sans", "sans-serif"],
       },
     },
   },
