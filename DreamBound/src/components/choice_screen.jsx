@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import Settings from "./settings";
-import AudioPlayer from "./AudioPlayer";
 
 const Choices = () => {
 
@@ -41,7 +40,6 @@ const Choices = () => {
             </div>
             <Settings onClose={handleonClose} visible={showSettings}/>
             <div className="-space-y-10">
-                <AudioPlayer/>
             </div>
         </div>
     );

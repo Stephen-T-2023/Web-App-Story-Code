@@ -5,12 +5,12 @@ const AudioPlayer = () => {
   const { isPlaying, togglePlayPause, volume, handleVolumeChange } = useAudio();
 
   return (
-    <div>
-      <button onClick={togglePlayPause}>
+    <div className='bg-ash rounded-lg flex flex-wrap justify-center w-1/6 font-heading text-1xl'>
+      <button onClick={togglePlayPause} className='border-2 border-black w-full'>
         {isPlaying ? 'Pause' : 'Play'}
       </button>
 
-      <div>
+      <div className='border-2 border-black w-full flex justify-center'>
         <label>Volume: </label>
         <input
           type="range"
