@@ -1,3 +1,5 @@
+import { useState, useEffect} from 'react';
+
 const Music = () => {
 
     const audiopath = '../src/assets/background_loop.mp3'
