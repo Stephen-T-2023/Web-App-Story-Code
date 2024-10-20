@@ -1,28 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect} from 'react';
 import Settings from "./settings";
-import Music from "./music_play_pause";
+import AudioPlayer from "./AudioPlayer";
 
 const Menu = () => {
-
-    // const audiopath = '../src/assets/background_loop.mp3'
-    
-    // const [audio] = useState(new Audio(audiopath))
-    // const [playing, setPlaying] = useState(false)
-
-    // const toggle = () => setPlaying(!playing)
-
-    // useEffect(() => {
-    //     playing ? audio.play() : audio.pause()
-    //     },
-    //     [playing, audio])
-
-    // useEffect(() => {
-    //     audio.addEventListener('ended', () => {
-    //         audio.play()
-    //     })
-    // },
-    // [audio])
 
     const navigate = useNavigate();
     const startClick = () => {
@@ -52,8 +33,8 @@ const Menu = () => {
                     <h2 className="font-heading text-6xl">Exit Game</h2>
                 </button>
             </div>
-            {/* <button onClick={toggle} className="bg-whitesmoke rounded-xl font-heading text-2xl w-2/12 h-8">Play / Pause</button> */}
             <Settings onClose={handleonClose} visible={showSettings}/>
+            <AudioPlayer/>
         </div>
     );
 }
