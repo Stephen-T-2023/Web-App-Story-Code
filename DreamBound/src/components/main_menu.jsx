@@ -26,9 +26,9 @@ const Menu = () => {
                 <button onClick={() => setShowSettings(true)} className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center">
                     <h2 className="font-heading text-6xl">Settings</h2>
                 </button>
-                <button className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center">
-                    <h2 className="font-heading text-6xl">Contacts</h2>
-                </button>
+                <a className="bg-outerspace text-whitesmoke border-2 border-black rounded font-heading text-6xl w-8/12 h-24 gap-4 flex justify-center items-center" href="https://github.com/Stephen-T-2023" target="blank">
+                    Github
+                </a>
                 <button className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center">
                     <h2 className="font-heading text-6xl">Exit Game</h2>
                 </button>

@@ -21,28 +21,28 @@ const Choices = () => {
     })
 
     return (
-        <div className="bg-onyx w-screen h-screen flex flex-wrap justify-center">
+        <div className="bg-starrysky w-screen h-screen flex flex-wrap justify-center">
             <div className="font-heading text-7xl w-full h-20 flex">
                 <button onClick={homeClick} className="bg-ash border-2 border-black rounded w-1/2 h-20">Home</button>
-                <button className="bg-ash border-2 border-black rounded w-1/2 h-20">Contacts</button>
+                <a className="bg-ash border-2 border-black rounded w-1/2 h-20 flex justify-center" href="https://github.com/Stephen-T-2023" target="blank">Github</a>
                 <button onClick={() => setShowSettings(true)} className="bg-ash border-2 border-black rounded w-1/2 h-20">Settings</button>
             </div>
-            <div style={{ backgroundImage: `url(${imageURL})`}} className="bg-no-repeat bg-cover bg-center bg-fixed w-screen h-4/6 flex flex-wrap justify-center items-center">
+            <div className="bg-no-repeat bg-cover bg-center bg-fixed w-screen h-4/6 flex flex-wrap justify-center items-center">
                 <div className="bg-paynegrey opacity-80 border-2 border-black rounded w-11/12 h-5/6 flex justify-center">
                     <h1 className="font-body text-3xl p-4 break-keep flex justify-center items-center">{textFill.text}</h1>
                 </div>
             </div>
-            <div className="flex flex-wrap w-full h-20">
-                <div className="w-1/12 h-full"></div>
+            <div className="flex flex-wrap w-10/12 h-20">
                 <button className="bg-outerspace border-2 border-black rounded font-heading text-4xl w-1/3 h-full">{textFill.option1}</button>
-                <div className="w-1/6 h-full"></div>
+                <div className="w-1/3 h-full"/>
                 <button className="bg-outerspace border-2 border-black rounded font-heading text-4xl w-1/3 h-full">{textFill.option2}</button>
             </div>
             <Settings onClose={handleonClose} visible={showSettings}/>
-            <div className="-space-y-10">
-            </div>
         </div>
     );
 }
 
 export default Choices
+
+
+// style={{ backgroundImage: `url(${imageURL})`}} 
