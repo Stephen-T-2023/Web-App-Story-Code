@@ -12,8 +12,9 @@ function App() {
       <Router>
         <div className='App'>
           <Routes>
-            <Route path = '/' element={<Menu/>} />
+            <Route exact path = '/' element={<Menu/>} />
             <Route path = '/choice' element={<Choices/>} />
+            <Route path="*" element={<div className="bg-onyx w-screen h-screen flex justify-center items-center"><a className="bg-paynegrey border-2 border-black rounded-xl w-2/6 h-2/6 text-4xl flex justify-center items-center" href="/" target="blank">404 Error: Press To Return Home</a></div>}/>
           </Routes>
         </div>
       </Router>
