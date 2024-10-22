@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import Settings from "./settings";
+import origin from "./data";
 
 const Choices = () => {
 
@@ -32,7 +33,7 @@ const Choices = () => {
             </div>
             <div className="bg-no-repeat bg-cover bg-center bg-fixed w-screen h-4/6 flex flex-wrap justify-center items-center">
                 <div className="bg-paynegrey opacity-80 border-2 border-black rounded w-11/12 h-5/6 flex justify-center">
-                    <h1 className="font-body text-3xl text-whitesmoke p-4 break-keep flex justify-center items-center">{textFill.text}</h1>
+                    <h1 className="font-body text-3xl text-whitesmoke p-4 break-keep flex justify-center items-center">{origin.text}</h1>
                 </div>
             </div>
             <div className="flex flex-wrap w-10/12 h-20">

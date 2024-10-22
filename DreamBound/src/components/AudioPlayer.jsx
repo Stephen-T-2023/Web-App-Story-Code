@@ -21,7 +21,6 @@ const AudioPlayer = () => {
           onChange={handleVolumeChange}
         />
       </div>
-      <div className='border-2 border-black w-full justify-center items-center p-2'>(If you want to hear music while playing, do not press play before starting game)</div>
     </div>
   );
 };
