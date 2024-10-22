@@ -1,52 +1,72 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import Settings from "./settings";
-import origin from "./data";
+import textData from './textData';
 
 const Choices = () => {
 
+    // allows for navigation from the choices page to the main menu on button press
     const navigate = useNavigate();
     const homeClick = () => {
-        navigate('/')
+        navigate('/');
     };
 
+    // manages the state to control the visibility of the settings page
     const [showSettings, setShowSettings] = useState(false);
     const handleonClose = () => setShowSettings(false);
 
-    const imageURL = "../src/assets/starrysky.jpg"
+    // stores the URL of the background image for the choices page in case a feature where the background can change wants to be added in the future
+    const imageURL = "../src/assets/starrysky.jpg";
 
-    const [textFill, settextFill] = useState({
-        id: "",
-        text : "In a world ravaged by nuclear warfare, hope has become a distant memory. Amid the ruins, the ancient god Ygraorra has descended, offering salvation through the seductive harvest of dreams. His followers, the Dreamweavers, lull the desperate into slumber, where they can escape the bleak reality and dwell in their ideal worlds. But not everyone is swayed; a growing resistance fights to reclaim the shattered remnants of humanity’s former life. You find yourself ensnared by the Dreamweavers, on the brink of Ygraorra's 'grace'. As the whispers of an enchanting utopia flood your mind, you face a pivotal choice: Do you succumb to the alluring visions of a perfect existence, or do you rally against the forces that would bind you to a false paradise?",
-        option1text: "Accept Ygraorra's Grace.",
-        option2text: "Reject Your Fate, Fight Back!",
-        option1func: "",
-        option2func: ""
-    })
+    // sets the initial text content on the screen and updates as options are selected
+    const [textFill, setTextFill] = useState(textData.start);
+
+    // updates the displayed text and options based on the user's choice, if a valid path exists
+    const handleOptionClick = (nextPath) => {
+        if (nextPath && textData[nextPath]) {
+            setTextFill(textData[nextPath]); 
+        } else {
+            console.log("No further path available.");
+        }
+    };
 
     return (
-        <div className="bg-starrysky w-screen h-screen flex flex-wrap justify-center">
+        // overall container for the page, setting the background and layout
+        <div className="bg-starrysky w-screen h-screen flex flex-wrap justify-center" style={{ backgroundImage: `url(${imageURL})` }}>
+            
+            {/* top navigation bar with Home, Github, and Settings buttons */}
             <div className="font-heading text-7xl w-full h-20 flex">
                 <button onClick={homeClick} className="bg-ash border-2 border-black rounded w-1/2 h-20">Home</button>
                 <a className="bg-ash border-2 border-black rounded w-1/2 h-20 flex justify-center" href="https://github.com/Stephen-T-2023" target="blank">Github</a>
                 <button onClick={() => setShowSettings(true)} className="bg-ash border-2 border-black rounded w-1/2 h-20">Settings</button>
             </div>
+
+            {/* main text display area, showing story content and options */}
             <div className="bg-no-repeat bg-cover bg-center bg-fixed w-screen h-4/6 flex flex-wrap justify-center items-center">
                 <div className="bg-paynegrey opacity-80 border-2 border-black rounded w-11/12 h-5/6 flex justify-center">
-                    <h1 className="font-body text-3xl text-whitesmoke p-4 break-keep flex justify-center items-center">{origin.text}</h1>
+                    <h1 className="font-body text-3xl text-whitesmoke p-4 break-keep flex justify-center items-center">{textFill.text}</h1>
                 </div>
             </div>
+
+            {/* option buttons, allowing the user to make choices to progress the story */}
             <div className="flex flex-wrap w-10/12 h-20">
-                <button className="bg-outerspace border-2 border-black rounded font-heading text-4xl text-whitesmoke w-1/3 h-full">{textFill.option1text}</button>
+                <button 
+                    className="bg-outerspace border-2 border-black rounded font-heading text-4xl text-whitesmoke w-1/3 h-full"
+                    onClick={() => handleOptionClick(textFill.option1path)}
+                >
+                    {textFill.option1text}
+                </button>
                 <div className="w-1/3 h-full"/>
-                <button className="bg-outerspace border-2 border-black rounded font-heading text-4xl text-whitesmoke w-1/3 h-full">{textFill.option2text}</button>
+                <button 
+                    className="bg-outerspace border-2 border-black rounded font-heading text-4xl text-whitesmoke w-1/3 h-full"
+                    onClick={() => handleOptionClick(textFill.option2path)} 
+                >
+                    {textFill.option2text}
+                </button>
             </div>
-            <Settings onClose={handleonClose} visible={showSettings}/>
+            <Settings onClose={handleonClose} visible={showSettings} />
         </div>
     );
-}
+};
 
-export default Choices
-
-
-// style={{ backgroundImage: `url(${imageURL})`}} 
+export default Choices;
