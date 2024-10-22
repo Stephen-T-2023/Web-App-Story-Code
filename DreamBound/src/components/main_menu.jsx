@@ -2,13 +2,18 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect} from 'react';
 import Settings from "./settings";
 import AudioPlayer from "./AudioPlayer";
+import { useAudio } from './AudioContext';
 
 const Menu = () => {
 
     const navigate = useNavigate();
+
+    
     const startClick = () => {
         navigate('/choice')
     };
+    const { isPlaying, togglePlayPause, volume, handleVolumeChange } = useAudio();
+    
 
     const [showSettings, setShowSettings] = useState(false);
     const handleonClose = () => setShowSettings(false);
@@ -20,7 +25,10 @@ const Menu = () => {
                 <div className="bg-starrysky text-ash border-2 border-black rounded-xl w-8/12 h-32 gap-4 flex justify-center items-center">
                     <h1 className="font-heading text-8xl">DreamBound</h1>
                 </div>
-                <button onClick={startClick} className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center">
+                <button onClick={() => {
+                    startClick();
+                    togglePlayPause();
+                }}  className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center">
                     <h2 className="font-heading text-6xl">Start Game</h2>
                 </button>
                 <button onClick={() => setShowSettings(true)} className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center">
@@ -34,7 +42,6 @@ const Menu = () => {
                 </button>
             </div>
             <Settings onClose={handleonClose} visible={showSettings}/>
-            <AudioPlayer/>
         </div>
     );
 }
