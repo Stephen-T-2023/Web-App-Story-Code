@@ -12,7 +12,7 @@ const Menu = () => {
     const startClick = () => {
         navigate('/choice')
     };
-    const { isPlaying, togglePlayPause, volume, handleVolumeChange } = useAudio();
+    const { togglePlayPause } = useAudio();
     
 
     const [showSettings, setShowSettings] = useState(false);
