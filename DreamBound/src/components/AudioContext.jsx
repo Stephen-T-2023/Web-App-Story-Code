@@ -22,6 +22,15 @@ export const AudioProvider = ({ children }) => {
     setIsPlaying(!isPlaying);
   };
 
+  const togglePlay = () => {
+    if (!isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(true);
+  };
+
   const handleVolumeChange = (e) => {
     const newVolume = parseFloat(e.target.value);
     setVolume(newVolume);
@@ -32,6 +41,7 @@ export const AudioProvider = ({ children }) => {
     isPlaying,
     volume,
     togglePlayPause,
+    togglePlay,
     handleVolumeChange,
   };
 

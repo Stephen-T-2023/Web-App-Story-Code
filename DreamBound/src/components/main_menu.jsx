@@ -12,7 +12,8 @@ const Menu = () => {
     const startClick = () => {
         navigate('/choice')
     };
-    const { togglePlayPause } = useAudio();
+
+    const { togglePlay } = useAudio();
     
 
     const [showSettings, setShowSettings] = useState(false);
@@ -27,7 +28,7 @@ const Menu = () => {
                 </div>
                 <button onClick={() => {
                     startClick();
-                    togglePlayPause();
+                    togglePlay();
                 }}  className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center">
                     <h2 className="font-heading text-6xl">Start Game</h2>
                 </button>
