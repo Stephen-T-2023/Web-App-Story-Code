@@ -28,16 +28,136 @@ const textData = {
         text: "The cracks in this perfect world begin to show. You start questioning everything. Is this all a dream?",
         option1text: "Confront Ygraorra.",
         option2text: "Escape the Dream.",
+        option1path: "Confront",
+        option2path: "escapeDream"
+    },
+    Confront: {
+        id: "Confront",
+        text: "",
+        option1text: "End the Story.",
+        option2text: "Reflect on Choices.",
+        option1path: null,
+        option2path: null
+    },
+    escapeDream: {
+        id: "escapeDream",
+        text: "",
+        option1text: "End the Story.",
+        option2text: "Reflect on Choices.",
         option1path: null,
         option2path: null
     },
     rejected: {
         id: "rejected",
         text: "You resist Ygraorra's seduction. The world around you remains harsh and unforgiving, but the strength of your will grows. The resistance is waiting. Will you lead them to reclaim humanity?",
-        option1text: "Lead the Resistance.",
+        option1text: "Escape for the resistance",
         option2text: "Seek Solitude.",
         option1path: "leadResistance",
         option2path: "seekSolitude"
+    },
+    seekSolitude: {
+        id: "seekSolitude",
+        text: "",
+        option1text: "Escape from the City.",
+        option2text: "Seek what remains of your former life.",
+        option1path: "escapeCity",
+        option2path: "huntedAgain"
+    },
+    escapeCity: {
+        id: "escapeCity",
+        text: "",
+        option1text: "End the story.",
+        option2text: "Reflect on Choices.",
+        option1path: null,
+        option2path: null
+    },
+    huntedAgain: {
+        id: "huntedAgain",
+        text: "",
+        option1text: "Submit to Your Pursuers.",
+        option2text: "Escape with all you can.",
+        option1path: "embraceNewLife",
+        option2path: "escapePursuers"
+    },
+    escapePursuers: {
+        id: "escapePursuers",
+        text: "",
+        option1text: "End the story.",
+        option2text: "Reflect on choices.",
+        option1path: null,
+        option2path: null
+    },
+    leadResistance: {
+        id: "leadResistance",
+        text: "",
+        option1text: "Join the resistance officially.",
+        option2text: "Become a mole for the Dreamweavers.",
+        option1path: "joinResistance",
+        option2path: ""
+    },
+    joinResistance: {
+        id: "joinResistance",
+        text: "",
+        option1text: "find spy",
+        option2text: "don't find spy",
+        option1path: "overthrowCult",
+        option2path: ""
+    },
+    overthrowCult: {
+        id: "overthrowCult",
+        text: "",
+        option1text: "Search archives",
+        option2text: "Burn all traces",
+        option1path: "theTruth",
+        option2path: ""
+    },
+    theTruth: {
+        id: "theTruth",
+        text: "",
+        option1text: "Battle",
+        option2text: "Speak reason",
+        option1path: "theBattle",
+        option2path: ""
+    },
+    theBattle: {
+        id: "theBattle",
+        text: "",
+        option1text: "Win",
+        option2text: "Lose",
+        option1path: "victoryAchieved",
+        option2path: "defeated"
+    },
+    victoryAchieved: {
+        id: "victoryAchieved",
+        text: "",
+        option1text: "Devour",
+        option2text: "Destroy",
+        option1path: "trueEnding",
+        option2path: "destroyDivinity"
+    },
+    trueEnding: {
+        id: "trueEnding",
+        text: "",
+        option1text: "End the story.",
+        option2text: "Reflect on Choices.",
+        option1path: null,
+        option2path: null
+    },
+    destroyDivinity: {
+        id: "destroyDivinity",
+        text: "",
+        option1text: "End the story.",
+        option2text: "Reflect on Choices.",
+        option1path: null,
+        option2path: null
+    },
+    defeated: {
+        id: "defeated",
+        text: "",
+        option1text: "End the story.",
+        option2text: "Reflect on Choices.",
+        option1path: null,
+        option2path: null
     },
 };
 

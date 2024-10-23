@@ -37,8 +37,8 @@ const Choices = () => {
             {/* top navigation bar with Home, Github, and Settings buttons */}
             <div className="font-heading text-7xl w-full h-20 flex">
                 <button onClick={homeClick} className="bg-ash border-2 border-black rounded w-1/2 h-20">Home</button>
-                <a className="bg-ash border-2 border-black rounded w-1/2 h-20 flex justify-center" href="https://github.com/Stephen-T-2023" target="blank">Github</a>
                 <button onClick={() => setShowSettings(true)} className="bg-ash border-2 border-black rounded w-1/2 h-20">Settings</button>
+                <a className="bg-ash border-2 border-black rounded w-1/2 h-20 flex justify-center" href="https://github.com/Stephen-T-2023" target="blank">Github</a>
             </div>
 
             {/* main text display area, showing story content and options */}
