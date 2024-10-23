@@ -23,10 +23,10 @@ const Menu = () => {
     const handleonClose = () => setShowSettings(false);
 
     return (
-        // main container for the menu screen, setting up full-screen layout and centering elements
+        // menu screen, setting up full-screen layout and centering elements
         <div className="bg-onyx w-screen h-screen flex flex-wrap justify-center items-center">
             
-            {/* inner container that holds all the buttons and the game title, with layout and styling */}
+            {/* holds all the buttons and the game title, with layout and styling */}
             <div className="bg-paynegrey border-2 border-black rounded w-11/12 h-5/6 space-y-2 flex flex-wrap justify-center">
                 
                 {/* empty div used for layout purposes */}
@@ -48,7 +48,7 @@ const Menu = () => {
                     <h2 className="font-heading text-6xl">Start Game</h2>
                 </button>
 
-                {/* settings button that opens the settings modal */}
+                {/* settings button that opens the settings */}
                 <button 
                     onClick={() => setShowSettings(true)} 
                     className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center"
@@ -73,7 +73,7 @@ const Menu = () => {
                 </button>
             </div>
 
-            {/* settings modal component, controlled by showSettings state */}
+            {/* settings component, controlled by showSettings state */}
             <Settings onClose={handleonClose} visible={showSettings} />
         </div>
     );

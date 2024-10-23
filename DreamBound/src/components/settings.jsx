@@ -1,11 +1,11 @@
 import AudioPlayer from "./AudioPlayer";
 
 export default function Settings({ onClose, visible }) {
-    // If the settings modal is not visible, return null (do not do anything)
+    // If the settings is not visible, return null (do not do anything)
     if (!visible) return null;
 
     return (
-        // Container for the settings modal, with a semi-transparent background
+        // settings modal, with a semi-transparent background
         <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex flex-wrap justify-center items-center">
             <div className="bg-ash rounded w-10/12 h-4/6 flex flex-wrap justify-center items-center">
                 {/* Header for the settings modal */}
