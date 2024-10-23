@@ -21,9 +21,23 @@ const Choices = () => {
     // sets the initial text content on the screen and updates as options are selected
     const [textFill, setTextFill] = useState(textData.start);
 
+    // track the users choice history
+    const [choicesHistory, setChoicesHistory] = useState([]);
+
     // updates the displayed text and options based on the user's choice, if a valid path exists
-    const handleOptionClick = (nextPath) => {
-        if (nextPath && textData[nextPath]) {
+    const handleOptionClick = (nextPath, selectedOption) => {
+        if (nextPath === null) {
+            if (selectedOption === "Reflect on Choices.") {
+                navigate('/reflect', {state: {choicesHistory} });
+            } else {
+                navigate('/end');
+            }
+            
+        } else if (nextPath && textData[nextPath]) {
+            setChoicesHistory(prevChoices => [
+                ...prevChoices,
+                {choice: selectedOption, storyText: textFill.text}
+            ]);
             setTextFill(textData[nextPath]); 
         } else {
             console.log("No further path available.");
@@ -52,14 +66,14 @@ const Choices = () => {
             <div className="flex flex-wrap w-10/12 h-20">
                 <button 
                     className="bg-outerspace border-2 border-black rounded font-heading text-4xl text-whitesmoke w-1/3 h-full"
-                    onClick={() => handleOptionClick(textFill.option1path)}
+                    onClick={() => handleOptionClick(textFill.option1path, textFill.option1text)}
                 >
                     {textFill.option1text}
                 </button>
                 <div className="w-1/3 h-full"/>
                 <button 
                     className="bg-outerspace border-2 border-black rounded font-heading text-4xl text-whitesmoke w-1/3 h-full"
-                    onClick={() => handleOptionClick(textFill.option2path)} 
+                    onClick={() => handleOptionClick(textFill.option2path, textFill.option2text)} 
                 >
                     {textFill.option2text}
                 </button>
