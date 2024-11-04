@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
-import Settings from "./settings";
-import { useAudio } from './AudioContext';
+import Settings from "./components/settings";
+import { useAudio } from './components/AudioContext';
 
 const Menu = () => {
 

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
-import Settings from "./settings";
-import textData from '../assets/textData';
+import Settings from "./components/settings";
+import textData from './assets/textData';
 
 const Choices = () => {
 

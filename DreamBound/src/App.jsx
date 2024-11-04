@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import './App.css';
-import Choices from './components/choice_screen';
-import Menu from './components/main_menu';
+import Choices from './choice_screen';
+import Menu from './main_menu';
 import { AudioProvider } from "./components/AudioContext";
-import EndScene from "./components/end_scene";
-import ReflectChoicesScene from "./components/reflect_choices";
+import EndScene from "./end_scene";
+import ReflectChoicesScene from "./reflect_choices";
 
 
 function App() {
