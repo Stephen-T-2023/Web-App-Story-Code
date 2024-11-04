@@ -46,7 +46,7 @@ const Choices = () => {
 
     return (
         // setting the background and layout
-        <div className="bg-starrysky w-screen h-screen flex flex-wrap justify-center" style={{ backgroundImage: `url(${imageURL})` }}>
+        <div className="w-screen h-screen flex flex-wrap justify-center" style={{ backgroundImage: `url(${imageURL})` }}>
             
             {/* top navigation bar with Home, Github, and Settings buttons */}
             <div className="font-heading text-7xl w-full h-20 flex">
