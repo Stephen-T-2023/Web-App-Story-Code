@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import Settings from "./settings";
-import textData from './textData';
+import textData from '../assets/textData';
 
 const Choices = () => {
 
@@ -16,7 +16,7 @@ const Choices = () => {
     const handleonClose = () => setShowSettings(false);
 
     // stores the URL of the background image for the choices page in case a feature where the background can change wants to be added in the future
-    const imageURL = "../src/assets/starrysky.jpg";
+    const imageURL = "https://pixabay.com/photos/stars-night-heaven-starry-sky-472968/";
 
     // sets the initial text content on the screen and updates as options are selected
     const [textFill, setTextFill] = useState(textData.start);
