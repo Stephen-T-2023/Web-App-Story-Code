@@ -5,7 +5,7 @@ const textData = {
         option2text: "Reject Your Fate, Fight Back!",
         option1path: "accepted",
         option2path: "rejected",
-        backgroundImage: "https://pixabay.com/photos/stars-night-heaven-starry-sky-472968/"
+        backgroundImage: "../src/assets/starrysky.jpg"
     },
     accepted: {
         text: "You awaken in a beautiful utopia, where everything you’ve ever wanted is yours. No pain, no suffering, only joy. You begin to lose track of time as days blend into one another in bliss.",

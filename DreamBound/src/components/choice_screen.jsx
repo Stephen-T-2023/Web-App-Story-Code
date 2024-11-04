@@ -15,11 +15,11 @@ const Choices = () => {
     const [showSettings, setShowSettings] = useState(false);
     const handleonClose = () => setShowSettings(false);
 
-    // stores the URL of the background image for the choices page in case a feature where the background can change wants to be added in the future
-    const imageURL = "https://pixabay.com/photos/stars-night-heaven-starry-sky-472968/";
-
     // sets the initial text content on the screen and updates as options are selected
     const [textFill, setTextFill] = useState(textData.start);
+
+    // stores the URL of the background image for the choices page in case a feature where the background can change wants to be added in the future
+    const imageURL = (textFill.backgroundImage);
 
     // track the users choice history
     const [choicesHistory, setChoicesHistory] = useState([]);
