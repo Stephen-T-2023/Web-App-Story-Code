@@ -43,7 +43,7 @@ const textData = {
         option2path: null
     },
     rejected: {
-        text: "You resist Ygraorra's seduction. The world around you remains harsh and unforgiving, but the strength of your will grows. You plot your escape from the temple of Ygraorra, careful not to alert the cultists. You know the wasteland outside holds danger, but it is better than the false paradise they offer. As soon as you spot a gap in the temple's defences you take your chance and manage to flee into the wasteland. Now you have escaped what will you choose to do? The resistance is waiting. Will you lead them to reclaim humanity? Or look out for yourself and try to escape from the cults reaches on your own?",
+        text: "You resist Ygraorra's seduction. The world around you remains harsh and unforgiving, but the strength of your will grows. You plot your escape from the temple of Ygraorra, careful not to alert the cultists. You know the wasteland outside holds danger, but it is better than the false paradise they offer. As soon as you spot a gap in the temple's defences you take your chance and manage to flee into the wasteland. Now you have escaped what will you choose to do? The resistance is waiting. Will you lead them to reclaim humanity? Or look out for yourself and try to escape from the cult's reaches on your own?",
         option1text: "Escape for the resistance",
         option2text: "Seek Solitude.",
         option1path: "meetResistance",
