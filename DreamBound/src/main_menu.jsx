@@ -36,7 +36,7 @@ const Menu = () => {
 
                 {/* game title section with styling for centered text */}
                 <div className="bg-starrysky text-ash border-2 border-black rounded-xl w-8/12 h-32 gap-4 flex justify-center items-center">
-                    <h1 className="font-heading text-8xl">DreamBound</h1>
+                    <h1 className="font-heading 2xl:text-8xl xl:text-8xl lg:text-7xl md:text-7xl sm:text-6xl text-4xl">DreamBound</h1>
                 </div>
 
                 {/* start game button that navigates to the choices screen and toggles audio when clicked */}
@@ -47,7 +47,7 @@ const Menu = () => {
                     }}  
                     className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center focus:bg-buttonpressed"
                 >
-                    <h2 className="font-heading text-6xl">Start Game</h2>
+                    <h2 className="font-heading 2xl:text-6xl xl:text-6xl lg:text-6xl md:text-6xl sm:text-5xl text-4xl">Start Game</h2>
                 </button>
 
                 {/* settings button that opens the settings */}
@@ -55,12 +55,12 @@ const Menu = () => {
                     onClick={() => setShowSettings(true)} 
                     className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center focus:bg-buttonpressed"
                 >
-                    <h2 className="font-heading text-6xl">Settings</h2>
+                    <h2 className="font-heading 2xl:text-6xl xl:text-6xl lg:text-6xl md:text-6xl sm:text-5xl text-4xl">Settings</h2>
                 </button>
 
                 {/* link to GitHub profile, opening in a new tab */}
                 <a 
-                    className="bg-outerspace text-whitesmoke border-2 border-black rounded font-heading text-6xl w-8/12 h-24 gap-4 flex justify-center items-center focus:bg-buttonpressed" 
+                    className="bg-outerspace text-whitesmoke border-2 border-black rounded font-heading 2xl:text-6xl xl:text-6xl lg:text-6xl md:text-6xl sm:text-5xl text-4xl w-8/12 h-24 gap-4 flex justify-center items-center focus:bg-buttonpressed" 
                     href="https://github.com/Stephen-T-2023" 
                     target="blank"
                 >
@@ -71,7 +71,7 @@ const Menu = () => {
                 <button 
                     className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center focus:bg-buttonpressed"
                 >
-                    <h2 className="font-heading text-6xl">Exit Game</h2>
+                    <h2 className="font-heading 2xl:text-6xl xl:text-6xl lg:text-6xl md:text-6xl sm:text-5xl text-4xl">Exit Game</h2>
                 </button>
             </div>
 
