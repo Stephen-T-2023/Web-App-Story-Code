@@ -16,9 +16,9 @@ const ReflectChoicesScene = () => {
 
     return (
         // Outer div for background styling, making the scene fullscreen and centering the content
-        <div className="bg-onyx w-screen h-screen flex justify-center items-center">
+        <div className="bg-starrysky w-screen h-screen flex justify-center items-center">
             {/* Main content area with background image, padding, and text styling */}
-            <div className="bg-starrysky text-ash border-2 border-black rounded-xl p-10 space-y-4 text-center w-11/12 max-w-screen-md">
+            <div className="bg-onyx text-ash border-2 border-black rounded-xl p-10 space-y-4 text-center w-11/12 max-w-screen-md opacity-90 font-body">
                 {/* Title of the page */}
                 <h1 className="font-heading text-6xl">Your Journey</h1>
 
@@ -50,7 +50,7 @@ const ReflectChoicesScene = () => {
                 {/* Button to allow the user to return to the main menu */}
                 <button 
                     onClick={returnToMenu} 
-                    className="bg-outerspace text-whitesmoke border-2 border-black rounded p-4 mt-4"
+                    className="bg-outerspace text-whitesmoke border-2 border-black rounded p-4 mt-4 focus:bg-buttonpressed"
                 >
                     Return to Main Menu
                 </button>

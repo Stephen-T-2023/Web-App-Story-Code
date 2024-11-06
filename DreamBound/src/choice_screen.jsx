@@ -26,33 +26,35 @@ const Choices = () => {
 
     // updates the displayed text and options based on the user's choice, if a valid path exists
     const handleOptionClick = (nextPath, selectedOption) => {
-        if (nextPath === null) {
-            if (selectedOption === "Reflect on Choices.") {
-                navigate('/reflect', {state: {choicesHistory} });
+        setTimeout( () => {
+            if (nextPath === null) {
+                if (selectedOption === "Reflect on Choices.") {
+                    navigate('/reflect', {state: {choicesHistory} });
+                } else {
+                    navigate('/end');
+                }
+                
+            } else if (nextPath && textData[nextPath]) {
+                setChoicesHistory(prevChoices => [
+                    ...prevChoices,
+                    {choice: selectedOption, storyText: textFill.text}
+                ]);
+                setTextFill(textData[nextPath]); 
             } else {
-                navigate('/end');
-            }
-            
-        } else if (nextPath && textData[nextPath]) {
-            setChoicesHistory(prevChoices => [
-                ...prevChoices,
-                {choice: selectedOption, storyText: textFill.text}
-            ]);
-            setTextFill(textData[nextPath]); 
-        } else {
-            console.log("No further path available.");
-        }
+                console.log("No further path available.");
+            }},
+        250)//timeout numner
     };
 
     return (
         // setting the background and layout
-        <div className="w-screen h-screen flex flex-wrap justify-center" style={{ backgroundImage: `url(${imageURL})` }}>
+        <div className="w-screen h-screen flex flex-wrap justify-center bg-no-repeat bg-cover" style={{ backgroundImage: `url(${imageURL})` }}>
             
             {/* top navigation bar with Home, Github, and Settings buttons */}
             <div className="font-heading text-7xl w-full h-20 flex">
-                <button onClick={homeClick} className="bg-ash border-2 border-black rounded w-1/2 h-20">Home</button>
-                <button onClick={() => setShowSettings(true)} className="bg-ash border-2 border-black rounded w-1/2 h-20">Settings</button>
-                <a className="bg-ash border-2 border-black rounded w-1/2 h-20 flex justify-center" href="https://github.com/Stephen-T-2023" target="blank">Github</a>
+                <button onClick={homeClick} className="bg-ash border-2 border-black rounded w-1/2 h-20 focus:bg-buttonpressed">Home</button>
+                <button onClick={() => setShowSettings(true)} className="bg-ash border-2 border-black rounded w-1/2 h-20 focus:bg-buttonpressed">Settings</button>
+                <a className="bg-ash border-2 border-black rounded w-1/2 h-20 flex justify-center focus:bg-buttonpressed" href="https://github.com/Stephen-T-2023" target="blank">Github</a>
             </div>
 
             {/* main text display area, showing story content and options */}
@@ -65,14 +67,14 @@ const Choices = () => {
             {/* option buttons, allowing the user to make choices to progress the story */}
             <div className="flex flex-wrap w-10/12 h-20">
                 <button 
-                    className="bg-outerspace border-2 border-black rounded font-heading text-4xl text-whitesmoke w-1/3 h-full"
+                    className="bg-outerspace border-2 border-black rounded font-heading text-4xl text-whitesmoke w-1/3 h-full focus:bg-buttonpressed"
                     onClick={() => handleOptionClick(textFill.option1path, textFill.option1text)}
                 >
                     {textFill.option1text}
                 </button>
                 <div className="w-1/3 h-full"/>
                 <button 
-                    className="bg-outerspace border-2 border-black rounded font-heading text-4xl text-whitesmoke w-1/3 h-full"
+                    className="bg-outerspace border-2 border-black rounded font-heading text-4xl text-whitesmoke w-1/3 h-full focus:bg-buttonpressed"
                     onClick={() => handleOptionClick(textFill.option2path, textFill.option2text)} 
                 >
                     {textFill.option2text}

@@ -12,6 +12,7 @@ export default {
         paynegrey: "#535B65",
         outerspace: "#4B5657",
         whitesmoke: "#F2F2F2",
+        buttonpressed: "#394141"
       },
       fontFamily: {
         heading: ["Changa", "sans-serif"],

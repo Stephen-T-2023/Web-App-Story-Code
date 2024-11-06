@@ -10,8 +10,10 @@ const Menu = () => {
 
     // when the button is pressed, it will navigate the user to the choices screen
     const startClick = () => {
-        navigate('/choice')
-    };
+            setTimeout ( () => {
+            navigate('/choice')
+            },
+        250)} //numner
 
     // allows the audio to be toggled (play or pause) upon clicking the associated button
     const { togglePlay } = useAudio();
@@ -43,7 +45,7 @@ const Menu = () => {
                         startClick();  // navigate to '/choice'
                         togglePlay();  // play audio
                     }}  
-                    className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center"
+                    className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center focus:bg-buttonpressed"
                 >
                     <h2 className="font-heading text-6xl">Start Game</h2>
                 </button>
@@ -51,14 +53,14 @@ const Menu = () => {
                 {/* settings button that opens the settings */}
                 <button 
                     onClick={() => setShowSettings(true)} 
-                    className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center"
+                    className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center focus:bg-buttonpressed"
                 >
                     <h2 className="font-heading text-6xl">Settings</h2>
                 </button>
 
                 {/* link to GitHub profile, opening in a new tab */}
                 <a 
-                    className="bg-outerspace text-whitesmoke border-2 border-black rounded font-heading text-6xl w-8/12 h-24 gap-4 flex justify-center items-center" 
+                    className="bg-outerspace text-whitesmoke border-2 border-black rounded font-heading text-6xl w-8/12 h-24 gap-4 flex justify-center items-center focus:bg-buttonpressed" 
                     href="https://github.com/Stephen-T-2023" 
                     target="blank"
                 >
@@ -67,7 +69,7 @@ const Menu = () => {
 
                 {/* exit game button, not currently functional but styled like other buttons */}
                 <button 
-                    className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center"
+                    className="bg-outerspace text-whitesmoke border-2 border-black rounded w-8/12 h-24 gap-4 flex justify-center items-center focus:bg-buttonpressed"
                 >
                     <h2 className="font-heading text-6xl">Exit Game</h2>
                 </button>
